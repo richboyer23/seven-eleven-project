@@ -1,0 +1,363 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+#mobile-version{
+  background-color: gray;
+  height: 80px;
+  .container{
+    width: 100%;
+    .icon-menu{
+      width: 45px;
+      div{
+        height: 7px;
+        background-color: #fff;
+        margin-bottom: 10px;
+      }
+    }
+    .right{
+      float: right;
+      border-radius: 6px;
+      background-color: red;
+    }
+    .left{
+      float: left;
+      margin:20px 30px;
+    }
+  }
+
+}
+
+#header_bg{
+  margin-top: 40px;
+  background: url("../../images/header_bg.fw.png") repeat-x top right;
+
+  text-align: center;
+  a{
+    img{
+      background-color: white;
+      padding:0px 20px 0px 20px;
+    }
+  }
+}
+#nav_menu{
+  list-style: none;
+  text-align: center;
+  border: 3px solid #006B41;
+  font-family: "Arial";
+  width:90%;
+  margin: 30px auto;
+  ul{
+    li{
+      display: inline-block;
+      &:hover{
+        background: url("../../images/link_hover.png") no-repeat center bottom;
+      }
+      a{
+        text-decoration: none;
+        color: #088162;
+        font-size: 30px;
+        display: block;
+        padding:20px 70px 20px 70px ;
+      }
+    }
+  }
+}
+#section_bd{
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  letter-spacing: 3px;
+  line-height: 50px;
+}
+#section_sml{
+  font-family: 'Oswald', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  width: 70%;
+  margin: 20px auto;
+  letter-spacing: 1px;
+
+}
+#reg_form{
+  font-family: 'Rosario', sans-serif;
+  font-size: 40px;
+  color:red;
+  width: 42%;
+  margin: 40px auto 10px auto;
+  font-weight: 500;
+
+}
+#section_form{
+  box-shadow: 2px 5px 10px 10px darkgray;
+  border-radius: 7px;
+  border: none;
+  width:42%;
+  margin: auto;
+  font-size: 21px;
+  font-family: Arial;
+  padding:20px 20px 20px 10px;
+  .input-field{
+    height: 37px;
+    margin-top:30px;
+    .label{
+      float: left;
+      text-align: right;
+      width: 30%;
+      padding:0px 10px 15px 10px;
+
+    }
+    .label_confirm{
+
+      p{
+        font-size: 19px;
+
+        font-family: 'Oswald', sans-serif;
+        width: 65%;
+        float: right;
+      }
+    }
+
+
+    .radio-type{
+
+      padding:0px 0px 15px 0px;
+      width: 100%;
+
+    }
+    .input{
+      float: left;
+      margin-left: 10px;
+      width: 61%;
+
+      input{
+
+        background-color: #E0E0E0;
+        margin-top: -15px;
+        border: none;
+        width: 100%;
+        height: 44px;
+      }
+
+      select.b_date{
+        font-size: 17px;
+        border-radius: 10px;
+        padding: 10px 19px 10px 19px;
+
+        background-color: #E0E0E0;
+        border:none;
+
+
+      }
+    }
+  }
+  .form-submit-button{
+    margin: 60px 20px 30px 0px;
+    text-align: right;
+
+
+    input{
+      font-size: 30px ;
+      padding: 10px 60px 10px 60px;
+      background-color:#EF2B2F;
+      color:white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+
+    }
+  }
+
+
+}
+.logo-card{
+  background-image: url("../../images/cards.png");
+  height: 298px;
+  width: 25%;
+  margin-left: 217px;
+  margin-top: -213px;
+  background-repeat: no-repeat;
+}
+#nav_footer{
+  list-style: none;
+  text-align: center;
+  font-family: "Arial";
+  background-color: #006B41;
+
+  ul{
+    display: inline-block;
+    li{
+      a{
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        display: block;
+        text-align: left;
+
+
+        padding:5px 80px 5px 80px ;
+        &.footer_title{
+          padding-top: 40px;
+          margin-bottom: 20px;
+          font-size: 25px;
+
+        }
+        &.footer_bottom{
+          padding-bottom: 40px;
+        }
+
+
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1366px) {
+
+  #mobile-version{
+    //display: none;
+  }
+
+}
+@media only screen and (max-width: 1330px) {
+  body{
+    background-color: royalblue;
+  }
+  #mobile-version{
+    display: none;
+  }
+  #nav_menu{
+    width:91%;
+    ul{
+      li{
+
+        a{
+          text-decoration: none;
+          color: #088162;
+          font-size: 30px;
+          display: block;
+          padding:20px 65px 20px 65px;
+        }
+      }
+    }
+  }
+
+}
+@media only screen and (max-width: 1300px) {
+  body{
+    background-color: green;
+  }
+  #mobile-version{display: none;}
+  #nav_menu{
+    width:91%;
+    ul{
+      li{
+
+        a{
+          text-decoration: none;
+          color: #088162;
+          font-size: 30px;
+          display: block;
+          padding:20px 27px 20px 27px;
+        }
+      }
+    }
+  }
+
+}
+@media only screen and (max-width: 979px) {
+  body{
+    background-color: yellow;
+  }
+  #nav_menu{display: none;}
+  #mobile-version{display: block;}
+
+}
+@media only screen and (max-width: 767px) {
+  body{
+    background-color: blue;
+  }
+}
+@media only screen and (max-width: 480px) {
+body{
+  background-color: red;
+}
+}
+#audioContainer{
+  text-align: center;
+  margin: auto;
+  width: 40%;
+  background-color: #E0E0E0;
+  color:white;
+}
+
+#videoContainer{
+  width: 40%;
+  background-color: #E0E0E0;
+  text-align: center;
+  margin: auto;
+  color:white;
+  #myVideo{
+    width: 100%;
+  }
+}
+.audVidContainer{
+  padding: 10px;
+  .audVidHeader{
+    background-color: #088162;
+    font-size: medium;
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Rosario', sans-serif;
+  }
+}
+.btn{
+  margin-top: 10px;
+  padding:5px 10px;
+}
+#demo-div{
+  .div-feeds{
+    padding: 10px;
+    margin: auto;
+    text-align: left;
+    font-family: "Century Gothic";
+    border: 1px solid black;
+    width: 40%;
+    .from{
+        font-weight: bold;
+        font-size: 20px;
+
+      span.f-right{
+        border: 1px solid grey;
+        //margin: 5px;
+        //text-align: right;
+        float: right;
+      }
+
+    }
+    .message{
+      padding: 10px 0px;
+    }
+
+    .actions{
+      ul{
+        li{
+          padding: 5px;
+          display: inline-block;
+        }
+
+      }
+
+    }
+  }
+
+}
+.has-error{
+  border: red 1px solid !important;
+}
+
+
