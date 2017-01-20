@@ -89,10 +89,10 @@ public class SevenElevenController {
                 List<FieldError> errors1 = bindingResult.getFieldErrors();
                 for (FieldError error : errors1) {
                     /*list.add(error.getField());*/
-                    list.add(error.getDefaultMessage());
-                    errFieldList.add(error.getField());
-                    object.put("errorFields",errFieldList);
-                    object.put("errors", list);
+                    //list.add(error.getDefaultMessage());
+                    //errFieldList.add(error.getField());
+                    object.put(error.getField(),error.getDefaultMessage());
+                    //object.put("errors", list);
                 }
             }
             out.print(object);

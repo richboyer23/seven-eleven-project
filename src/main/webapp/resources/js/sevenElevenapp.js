@@ -10,9 +10,9 @@ $('#submitBtn').click(function (e) {
             console.log(a);
         },
         success:function (response,a) {
-            console.log(response.errorFields);
-            console.log(response.errors);
-            console.log(response+" - "+ a);
+            //console.log(response.errorFields);
+            //console.log(response.errors);
+            //console.log(response+" - "+ a);
 
             /* $('#form-style-2').slideUp();
              $('#message').html("<h1>Successfully registered!</h1><p>We will inform you to access <b>"+response.name+"</b>.</p>");*/
@@ -31,24 +31,55 @@ $('#submitBtn').click(function (e) {
                     $("#err_message").append(b + "<br>");
                 });*/
 
-                $(".errmsg").hide();
+                $(".has-error").removeClass("has-error");
+                $(".error").remove();
+                $(".input-field input").css({
+                    "border":"1px solid green",
+                    "transition":"border-color 500ms ease-out"
+                });
+                $(".errmsg").fadeOut();
+                $.each(response,function (a,b) {
+                    console.log("Field: "+a+"- Message: "+b);
+                    $(".err_message_"+a).remove();
+                    $("#err_message_"+a).hide().fadeIn().addClass(".has-error");
+                    $("#"+a).css({
+                        "border":"1px solid red",
+                        "transition":"border-color 500ms ease-out"
+                    })
+                    $("#"+a).after('<div style="font-size:12px; color:red;" class="err_message_'+a+' errmsg">'+b+'</div>');
+                });
+
+                //$(".error-field:first").focus();
+
+                // for test code
+                /*$(".errmsg").hide();
+
+
 
                 $.each(response.errorFields,function (a,b) {
-                    $("#"+b).css({"border":"1px solid red"}).hide().fadeIn().addClass("has-error");
                     //$("#"+b).hide().fadeIn().addClass(".has-error");
-                    //console.log(b);
+                    $("#"+b).css({
+                        "border":"1px solid red",
+                        "transition":"border-color 500ms ease-out"
+                    });
 
-                    if ( b === "fullname"){
+                    if ( b == "fullname"){
                         $(".err_message_"+ b).show();
-                        $(".err_message_"+ b).text("Name fields should not be empty!");
-                    }else if( b === "email"){
+                        $(".err_message_"+ b).text("Name fields should not be empty!")
+                                             .css({"font-size":"12px","color":"red"});
+
+                    }else if( b == "email"){
                         $(".err_message_"+ b).show();
-                        $(".err_message_"+ b).text("Email fields should not be empty!");
-                    }else if( b ==="mobile"){
+                        $(".err_message_"+ b).text("Email fields should not be empty!")
+                                             .css({"font-size":"12px","color":"red"});
+                    }else if( b =="mobile"){
                         $(".err_message_"+ b).show();
-                        $(".err_message_"+ b).text("Mobile fields should not be empty!");
+                        $(".err_message_"+ b).text("Mobile fields should not be empty!").css({"font-size":"12px","color":"red"});
                     }
-                });
+
+                    //console.log("Errors: "+b);
+                });*/
+
 
             }
         }

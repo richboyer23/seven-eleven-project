@@ -10,6 +10,12 @@
 
 
 </head>
+<style>
+    .errmsg{
+        width: 410px;
+        float: right;
+    }
+</style>
 <body>
             <div id="result">
 
@@ -77,20 +83,18 @@
                         <div id="err_message"></div>
                        <div class="input-field"><!-- must be <label> t-->
                             <div class="label">Name</div>
-                            <div class="input"><input name="fullname" id="fullname" class="filed" type="text"></div>
-                            <div class="err_message_fullname errmsg"></div>
+                           <input name="fullname" id="fullname" class="filed input" type="text">
                        </div>
 
                         <div class="input-field">
                             <div class="label">Email</div>
-                            <div class="input"><input name="email" id="email" class="filed" type="text"></div>
-                            <div class="err_message_email errmsg"></div>
+                            <input name="email" id="email" class="filed input" type="text">
+
                         </div>
 
                         <div class="input-field">
                             <div class="label">Mobile Number</div>
-                            <div class="input"><input name="mobile" id="mobile" class="filed" type="text"></div>
-                            <div class="err_message_mobile errmsg"></div>
+                            <input name="mobile" id="mobile" class="filed input" type="text">
                         </div>
 
                         <div class="input-field">
@@ -173,8 +177,8 @@
 
             <canvas id="myCanvas" style="width:400px; height:300px; border:1px solid #000000;" ></canvas>
 -->
-            <script>
-                /*CANVAS SCRIPT VIDEO MANIPULATION*/
+           <!-- <script>
+                CANVAS SCRIPT VIDEO MANIPULATION*/
 
                 /*canvasF();
                 function canvasF(){
@@ -269,7 +273,6 @@
                 ctx.arc(170,100,10,0,2*Math.PI);
                 ctx.arc(170,100,5,0,2*Math.PI);
                 ctx.stroke();
--->
                 //var canvas = document.getElementById('canvas');
                 /*if (c.getContext){
 
@@ -284,7 +287,8 @@
                     ctx.arc(90,65,5,0,Math.PI*2);  // Right eye
                     ctx.stroke();
                 }*/
-            </script><!--
+
+            </script>
 
             &lt;!&ndash; End This is for canvas &ndash;&gt;
            &lt;!&ndash; <div id="demo-div" style="text-align: center; padding: 5px;">
@@ -302,7 +306,8 @@
                 <button onclick="stopWorker()">Stop Worker</button>
                 <br><br>
 
-            <script>-->
+            <script>
+            -->
            <!-- /* end demo workers */
 
             /*var w;
