@@ -28,11 +28,11 @@ public class SevenElevenForm {
 
     @NotBlank(message = "Email Field should not be empty!")
     //@NotEmpty(message = "Field should not be empty!")
-    @Email(message = "Must email!")
+    @Email(message = "Must valid email!")
     private String email;
 
     @NotBlank(message = "Mobile Field should not be empty!")
-    @Pattern(regexp = "(^&|[0-9]{11})", message = "Mobile must be mobile format!")
+    @Pattern(regexp = "(^&|[0-9]{11})", message = "Must mobile format!")
     private String mobile;
 
 
